@@ -1,0 +1,30 @@
+<footer>
+
+  <div class="container-fluid">
+    {{#if task}}
+    <div class="row">
+      <div class="col-6">
+        <h2>
+          {{task.title}}
+        </h2>
+      </div>
+      <div class="col-6">
+        <small>
+          Was completed on {{date-format task.date}}
+        </small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <p>
+          {{task.dscp}}
+        </p>
+      </div>
+    </div>
+    {{else}}
+    <span class="center">
+      select a task to preview it.
+    </span>
+    {{/if}}
+  </div>
+</footer>

@@ -1,0 +1,26 @@
+<header>
+  <nav class="navbar navbar-light">
+    <div class="nav-left-section">
+      <a class="navbar-brand">
+        <h2>ToDo List</h2>
+      </a>
+      <div class="data">
+        <h4>4 Incomplete Task</h4>
+        <span> {{date-format date}} </span>
+      </div>
+    </div>
+
+    <div class="menu">
+      {{#link-to "incompleted-tasks"}}
+      <a href="#" class="btn" id="btn-incompleted-task">
+        Incompleted Task
+      </a>
+      {{/link-to}}
+      {{#link-to "completed-tasks"}}
+      <a href="#" class="btn" id="btn-incompleted-task">
+        Completed Task
+      </a>
+      {{/link-to}}
+    </div>
+  </nav>
+</header>

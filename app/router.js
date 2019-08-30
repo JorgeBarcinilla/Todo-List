@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('incompleted-tasks');
+  this.route('add-task');
+  this.route('completed-tasks');
 });
 
 export default Router;

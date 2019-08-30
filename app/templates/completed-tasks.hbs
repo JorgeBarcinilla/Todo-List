@@ -1,0 +1,29 @@
+<section>
+  <div class="container-fluid pt-3">
+
+    <table class="table mt-5" id="#myTable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Task</th>
+          <th>Complete By</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="TableBody">
+        {{#each tasks as |task|}}
+          <tr>
+            <th scope="row"><i class="material-icons">check_circle_outline</i></th>
+            <td class="hand" {{action "previewTask" task}} role="button"> {{task.title}} </td>
+            <td>{{date-format task.date}}</td>
+            <td>
+              <i class="material-icons"{{action "deleteTask" i}} role="button" >delete_outline</i>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>
+{{footer-component task=selectedTask}}
